@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>MB66 - Trang Chủ Chính Thức</title>
+    
+    <!-- Nhúng thư viện icon miễn phí (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- BỔ SUNG QUAN TRỌNG: Link CSS của thư viện Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <!-- File CSS của bạn -->
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <!-- Lớp nền tối bên ngoài (hiển thị trên PC) -->
+    <div class="desktop-background">
+        
+        <!-- Khung ứng dụng chính (Kích thước mobile) -->
+        <div class="app-container">
+            
+            <!-- Header -->
+            <header class="header">
+                <div class="menu-icon">☰</div>
+                
+                <div class="logo">
+                    <!-- Thay 'logo.png' bằng tên file ảnh logo MB66 của bạn -->
+                    <img src="images/logo.png" alt="MB66 Logo">
+                </div>
+                
+                <div class="vip-icon">
+                    <!-- Thay 'vip.png' bằng tên file ảnh chữ VIP của bạn -->
+                    <img src="images/vip.png" alt="VIP">
+                </div>
+            </header>
+
+            <!-- Nội dung chính có thể cuộn -->
+            <main class="main-content">
+                
+                <!-- Khung Banner Swiper -->
+                <div class="swiper banner-swiper">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide">
+                            <img src="images/banner1.jpg" alt="Khuyến mãi MB66 1">
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide">
+                            <img src="images/banner2.jpg" alt="Khuyến mãi MB66 2">
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide">
+                            <img src="images/banner3.jpg" alt="Khuyến mãi MB66 3">
+                        </div>
+                        <!-- Slide 4 -->
+                        <div class="swiper-slide">
+                            <img src="images/banner4.jpg" alt="Khuyến mãi MB66 4">
+                        </div>
+                        <!-- Slide 5 -->
+                        <div class="swiper-slide">
+                            <img src="images/banner5.jpg" alt="Khuyến mãi MB66 5">
+                        </div>
+                    </div>
+                    <!-- Các dấu chấm tròn phân trang ở dưới banner -->
+                    <div class="swiper-pagination"></div>
+                </div>
+<!-- Khu vực Bảng điều khiển (Đăng ký / Đăng nhập & Quick Links) -->
+<div class="action-board">
+    
+    <!-- Cột Trái: Nút Đăng ký & Đăng nhập -->
+    <div class="auth-buttons">
+        <button class="btn-register">ĐĂNG KÝ</button>
+        <button class="btn-login">ĐĂNG NHẬP</button>
+    </div>
+
+    <!-- Cột Phải: 4 Icon điều hướng -->
+    <div class="quick-links">
+        <div class="link-item">
+            <div class="icon-box">
+                <img src="images/taiapp.png" alt="Tải App">
+            </div>
+            <span>Tải App</span>
+        </div>
+        
+        <div class="link-item">
+            <div class="icon-box">
+                <img src="images/tintuc.png" alt="Tin Tức">
+            </div>
+            <span>Tin Tức</span>
+        </div>
+        
+        <div class="link-item">
+            <div class="icon-box">
+                <img src="images/daily.png" alt="Đại Lý">
+            </div>
+            <span>Đại Lý</span>
+        </div>
+        
+        <!-- GTBB có chứa thẻ badge +188K -->
+        <div class="link-item badge-container">
+            <span class="badge">+188K</span>
+            <div class="icon-box">
+                <img src="images/gtbb.png" alt="GTBB">
+            </div>
+            <span>GTBB</span>
+        </div>
+    </div>
+</div> 
+            <!-- Khu vực Danh mục Game (Game Categories) -->
+<div class="game-categories-wrapper">
+    
+    <!-- Nút mũi tên trái -->
+    <i class="fa-solid fa-angle-left nav-arrow" id="btn-scroll-left"></i>
+    
+    <!-- Vùng chứa các mục có thể cuộn ngang -->
+    <div class="game-categories-scroll" id="game-scroll-box">
+        
+        <!-- Mục 1: Casino (Dùng fa-life-ring làm phỉnh Casino) -->
+        <div class="game-cat-item">
+            <i class="fa-solid fa-life-ring fa-2x cat-icon"></i>
+            <span>CASINO</span>
+        </div>
+
+        <!-- Mục 2: Nổ Hũ (Dùng CSS tự tạo khung đỏ chữ trắng 777) -->
+        <div class="game-cat-item">
+            <div class="cat-icon icon-777">777</div>
+            <span>NỔ HŨ</span>
+        </div>
+
+        <!-- Mục 3: Bắn Cá (Có trạng thái Đang chọn - Active) -->
+        <div class="game-cat-item active">
+            <i class="fa-solid fa-fish fa-2x cat-icon"></i>
+            <span>BẮN CÁ</span>
+            
+            <!-- Nền đỏ mũi tên kép báo hiệu đang được chọn -->
+            <div class="active-indicator">
+                <i class="fa-solid fa-angles-up"></i>
+            </div>
+        </div>
+
+        <!-- Mục 4: Game Bài (Dùng thẻ xếp chồng) -->
+        <div class="game-cat-item">
+            <i class="fa-solid fa-layer-group fa-2x cat-icon"></i>
+            <span>GAME BÀI</span>
+        </div>
+
+        <!-- Mục 5: Thể Thao -->
+        <div class="game-cat-item">
+            <i class="fa-solid fa-futbol fa-2x cat-icon"></i>
+            <span>THỂ THAO</span>
+        </div>
+
+    </div>
+
+    <!-- Nút mũi tên phải -->
+    <i class="fa-solid fa-angle-right nav-arrow" id="btn-scroll-right"></i>
+    
+</div>
+
+<!-- KHU VỰC TRÒ CHƠI HOT -->
+<div class="hot-games-section">
+    <!-- Tiêu đề -->
+    <h2 class="hot-games-title">GIỚI THIỆU TRÒ CHƠI HOT</h2>
+
+    <!-- Lưới chứa các trò chơi (3 cột) -->
+    <div class="games-grid">
+        
+        <!-- Game 1 -->
+        <div class="game-card">
+            <!-- Thay bằng tên ảnh của bạn -->
+            <img src="images/1.png" alt="SE Sexy Casino" class="game-img">
+        </div>
+
+        <!-- Game 2 -->
+        <div class="game-card">
+            <img src="images/2.png" alt="DG Casino" class="game-img">
+        </div>
+
+        <!-- Game 3 -->
+        <div class="game-card">
+            <img src="images/3.png" alt="SABA Thể Thao" class="game-img">
+        </div>
+
+        <!-- Game 4 -->
+        <div class="game-card">
+            <img src="images/4.png" alt="Quyết Chiến" class="game-img">
+        </div>
+
+        <!-- Game 5 -->
+        <div class="game-card">
+            <img src="images/5.png" alt="Kho Báu Aztec" class="game-img">
+        </div>
+
+        <!-- Game 6 -->
+        <div class="game-card">
+            <img src="images/6.png" alt="Quyết Chiến Tiền Thưởng" class="game-img">
+        </div>
+        <!-- Game 1 -->
+        <div class="game-card">
+            <!-- Thay bằng tên ảnh của bạn -->
+            <img src="images/7.png" alt="SE Sexy Casino" class="game-img">
+        </div>
+
+        <!-- Game 2 -->
+        <div class="game-card">
+            <img src="images/8.png" alt="DG Casino" class="game-img">
+        </div>
+
+        <!-- Game 3 -->
+        <div class="game-card">
+            <img src="images/9.png" alt="SABA Thể Thao" class="game-img">
+        </div>
+
+        <!-- Game 4 -->
+        <div class="game-card">
+            <img src="images/10.png" alt="Quyết Chiến" class="game-img">
+        </div>
+
+        <!-- Game 5 -->
+        <div class="game-card">
+            <img src="images/11.png" alt="Kho Báu Aztec" class="game-img">
+        </div>
+
+        <!-- Game 6 -->
+        <div class="game-card">
+            <img src="images/12.png" alt="Quyết Chiến Tiền Thưởng" class="game-img">
+        </div>
+        <!-- Game 1 -->
+        <div class="game-card">
+            <!-- Thay bằng tên ảnh của bạn -->
+            <img src="images/13.png" alt="SE Sexy Casino" class="game-img">
+        </div>
+
+        <!-- Game 2 -->
+        <div class="game-card">
+            <img src="images/14.png" alt="DG Casino" class="game-img">
+        </div>
+
+        <!-- Game 3 -->
+        <div class="game-card">
+            <img src="images/15.png" alt="SABA Thể Thao" class="game-img">
+        </div>
+
+        <!-- Game 4 -->
+        <div class="game-card">
+            <img src="images/16.png" alt="Quyết Chiến" class="game-img">
+        </div>
+
+        <!-- Game 5 -->
+        <div class="game-card">
+            <img src="images/17.png" alt="Kho Báu Aztec" class="game-img">
+        </div>
+
+        <!-- Game 6 -->
+        <div class="game-card">
+            <img src="images/18.png" alt="Quyết Chiến Tiền Thưởng" class="game-img">
+        </div>
+
+    </div>
+</div> 
+       
+       <!-- KHU VỰC TẢI APP -->
+<div class="download-app-section">
+    
+    <!-- Tiêu đề & Logo -->
+    <div class="dl-header">
+        <!-- Thay bằng tên file icon logo MB66 màu đỏ (image_98e4ab) -->
+        <img src="images/app_logo.png" alt="MB66 App Logo" class="dl-logo">
+        <div class="dl-title-box">
+            <div class="dl-title">TẢI APP MB66</div>
+            <div class="dl-subtitle">Để Có Trải Nghiệm Tốt Nhất</div>
+        </div>
+    </div>
+
+    <!-- Nội dung: Cột hình ảnh và Cột nút bấm -->
+    <div class="dl-content">
+        
+        <!-- Cột Trái: Ảnh điện thoại và Cáo -->
+        <div class="dl-image-side">
+            <!-- Bạn cắt phần ảnh điện thoại & chú cáo chèn vào đây -->
+            <img src="images/app_img.png" alt="Giao diện App MB66" class="dl-phone-img">
+        </div>
+
+        <!-- Cột Phải: Các nút tải -->
+        <div class="dl-buttons-side">
+            
+            <!-- Nhóm iOS -->
+            <div class="dl-btn-group">
+                <button class="btn-outline-red">TẢI APP IOS</button>
+                <!-- Thay bằng tên file ảnh App Store (image_98e4c6) -->
+                <img src="images/app_ios.png" alt="Download on App Store" class="dl-store-img">
+            </div>
+
+            <!-- Nhóm Android -->
+            <div class="dl-btn-group">
+                <button class="btn-outline-red">TẢI APP ANDROID</button>
+                <!-- Thay bằng tên file ảnh Google Play (image_98e4ca) -->
+                <img src="images/app_android.png" alt="Get it on Google Play" class="dl-store-img">
+            </div>
+
+        </div>
+    </div>
+</div>
+            </main>
+
+            <!-- Menu điều hướng dưới cùng (Bottom Nav) -->
+<nav class="bottom-nav">
+    <!-- Hiệu ứng viền cong nhô lên cho mục đang chọn (Trang Chủ) -->
+    <div class="active-curve"></div>
+
+    <!-- Mục 1: Trang Chủ (Có class 'active' vì đang được chọn) -->
+    <a href="#" class="nav-item active">
+        <img src="images/home-1.png" alt="Trang Chủ">
+        <span>TRANG CHỦ</span>
+    </a>
+
+    <!-- Mục 2: Cẩm Nang -->
+    <a href="#" class="nav-item">
+        <img src="images/footer_info.png" alt="Cẩm Nang">
+        <span>CẨM NANG</span>
+    </a>
+
+    <!-- Mục 3: Khuyến Mãi -->
+    <a href="#" class="nav-item">
+        <img src="images/footer.png" alt="Khuyến Mãi">
+        <span>KHUYẾN MÃI</span>
+    </a>
+
+    <!-- Mục 4: Liên Hệ -->
+    <a href="#" class="nav-item">
+        <img src="images/footer_chat.png" alt="Liên Hệ">
+        <span>LIÊN HỆ</span>
+    </a>
+
+    <!-- Mục 5: Chơi Thử -->
+    <a href="#" class="nav-item">
+        <img src="images/footer_tria.png" alt="Chơi Thử">
+        <span>CHƠI THỬ</span>
+    </a>
+</nav>
+
+        </div>
+    </div>
+   <!-- Bổ sung khối mã Modal này vào phần cuối của file index.html, ngay trước thẻ </body> -->
+<div id="auth-modal-overlay" class="modal-overlay hidden">
+    <div class="auth-modal">
+        <!-- Nút Đóng -->
+        <button id="close-modal-btn" class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+
+        <!-- Header: Logo và Slogan -->
+        <div class="modal-header">
+            <!-- Thay bằng tên ảnh logo của bạn -->
+            <img src="images/logo.png" alt="MB66 Logo" class="modal-logo">
+            
+        </div>
+
+        <!-- Khung chuyển đổi Tabs (Đăng Ký / Đăng Nhập) -->
+        <div class="modal-tabs">
+            <button id="tab-register" class="tab-btn active">ĐĂNG KÝ</button>
+            <button id="tab-login" class="tab-btn">ĐĂNG NHẬP</button>
+        </div>
+
+        <!-- Form Đăng Ký -->
+        <form id="form-register" class="auth-form">
+            <div class="input-group">
+                <input type="text" name="username" placeholder="Tên đăng nhập" required>
+            </div>
+            <div class="input-group">
+                <input type="password" name="password" placeholder="Mật khẩu" required>
+                <i class="fa-solid fa-eye-slash toggle-pw"></i>
+            </div>
+            <div class="input-group">
+                <input type="text" name="fullname" placeholder="Họ & tên" required>
+            </div>
+            <div class="input-group">
+                <!-- Trường nhập số điện thoại định dạng 10 số -->
+                <input type="tel" name="phone" placeholder="Nhập số điện thoại" pattern="[0-9]{10}" maxlength="10" required>
+            </div>
+            <div class="input-group">
+                <input type="email" placeholder="Địa chỉ email (Không bắt buộc)">
+            </div>
+            
+            <div class="checkbox-group">
+                <input type="checkbox" id="age-check" checked required>
+                <label for="age-check"><strong>Đã đủ 18 tuổi và đồng ý với trang web này</strong> <span class="text-red">Thỏa thuận đăng ký người dùng</span></label>
+            </div>
+
+            <button type="button" class="submit-btn btn-red-gradient">
+                ĐĂNG KÝ NGAY
+                <span class="btn-subtext">NẠP ĐẦU +10,888K</span>
+            </button>
+        </form>
+
+        <!-- Form Đăng Nhập -->
+        <form id="form-login" class="auth-form hidden">
+            <div class="input-group">
+                <i class="fa-regular fa-user input-icon-left"></i>
+                <input type="text" name="username" placeholder="Tên đăng nhập" class="has-icon-left" required>
+            </div>
+            <div class="input-group">
+                <i class="fa-solid fa-lock input-icon-left"></i>
+                <input type="password" name="password" placeholder="Mật khẩu thành viên" class="has-icon-left" required>
+                <i class="fa-solid fa-eye-slash toggle-pw"></i>
+            </div>
+            
+            <!-- Trường nhập số điện thoại bổ sung dưới mật khẩu theo yêu cầu -->
+            <div class="input-group">
+                <i class="fa-solid fa-phone input-icon-left"></i>
+                <input type="tel" name="phone" placeholder="Nhập số điện thoại" class="has-icon-left" required>
+            </div>
+
+            <div class="login-footer">
+                <label class="remember-label">
+                    <input type="checkbox"> Nhớ mật khẩu tài khoản của bạn
+                </label>
+                <div class="security-warning">
+                    Vui lòng tự bảo quản thông tin tài khoản<br>
+                    Để bảo đảm an toàn cho tài khoản của bạn
+                </div>
+                <a href="#" class="check-link">KIỂM TRA LINK TRƯỚC KHI ĐĂNG NHẬP <i class="fa-solid fa-link"></i></a>
+            </div>
+
+            <button type="button" class="submit-btn btn-red-solid">
+                ĐĂNG NHẬP
+            </button>
+        </form>
+    </div>
+</div>
+   <!-- BỔ SUNG QUAN TRỌNG: Link JS của thư viện Swiper (Phải đặt trước file script.js của bạn) -->
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+   <!-- Liên kết nhúng file JavaScript của bạn -->
+   <script src="script.js"></script>
+</body>
+</html>
